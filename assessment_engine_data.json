@@ -1,0 +1,897 @@
+{
+  "client_profile_schema": [
+    {
+      "id": "client_name",
+      "label": "Client Name",
+      "type": "text",
+      "placeholder": "e.g., Rajesh Sharma",
+      "required": true
+    },
+    {
+      "id": "assessment_date",
+      "label": "Assessment Date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "age",
+      "label": "Age",
+      "type": "select",
+      "options": ["Under 25", "25 – 35", "36 – 45", "46 – 55", "56 – 65", "65+"],
+      "default": "36 – 45"
+    },
+    {
+      "id": "family_size",
+      "label": "Family Size",
+      "type": "select",
+      "options": ["1 (Self)", "2 Members", "3 Members", "4 Members", "5 Members", "6+ Members"],
+      "default": "4 Members"
+    },
+    {
+      "id": "dependents_count",
+      "label": "Number of Dependents",
+      "type": "select",
+      "options": ["0 (None)", "1 Dependent", "2 Dependents", "3 Dependents", "4+ Dependents"],
+      "default": "2 Dependents"
+    },
+    {
+      "id": "work_status",
+      "label": "Employment / Work Status",
+      "type": "select",
+      "options": [
+        "Salaried - Private Sector",
+        "Salaried - Public / Govt Sector",
+        "Business Owner / Entrepreneur",
+        "Professional (Doctor, CA, Lawyer, Architect)",
+        "Self-Employed / Independent Consultant",
+        "Retired",
+        "Homemaker",
+        "Student"
+      ],
+      "default": "Salaried - Private Sector"
+    },
+    {
+      "id": "income_source",
+      "label": "Primary Income Source",
+      "type": "select",
+      "options": [
+        "Salary / Employment Compensation",
+        "Business Profits & Corporate Dividends",
+        "Professional Practice Consulting Fees",
+        "Investment Returns & Rental Yields",
+        "Pension & Annuity Inflows",
+        "Family Inheritance & Multiple Inflows"
+      ],
+      "default": "Salary / Employment Compensation"
+    },
+    {
+      "id": "annual_income",
+      "label": "Approx. Annual Income",
+      "type": "select",
+      "options": [
+        "Below ₹10 Lakhs",
+        "₹10 Lakhs – ₹25 Lakhs",
+        "₹25 Lakhs – ₹50 Lakhs",
+        "₹50 Lakhs – ₹1.00 Crore",
+        "₹1.00 Crore – ₹2.50 Crores",
+        "Above ₹2.50 Crores"
+      ],
+      "default": "₹25 Lakhs – ₹50 Lakhs"
+    },
+    {
+      "id": "financial_goal",
+      "label": "Main Financial Goal",
+      "type": "select",
+      "options": [
+        "Wealth Creation & Long-Term Compounding",
+        "Retirement & Financial Independence (FIRE)",
+        "Children's Higher Education & Marriage",
+        "Capital Preservation & Downside Protection",
+        "Real Estate & Family Home Acquisition",
+        "Legacy Creation & Intergenerational Transition"
+      ],
+      "default": "Wealth Creation & Long-Term Compounding"
+    }
+  ],
+  "financial_health": {
+    "title": "Financial Health Check",
+    "description": "Measures stability, cash-flow resilience, savings discipline, and asset growth capacity.",
+    "categories": [
+      {
+        "id": "health_personal",
+        "name": "Personal Financial Profile",
+        "weight": 0.10,
+        "questions": [
+          {
+            "id": "h_q1",
+            "text": "Employment status",
+            "why": "How secure is your current work or income situation?",
+            "options": [
+              {"label": "No current income", "score": 1},
+              {"label": "Uncertain / irregular", "score": 2},
+              {"label": "Somewhat stable", "score": 3},
+              {"label": "Stable", "score": 4},
+              {"label": "Very stable", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q2",
+            "text": "Family size",
+            "why": "How many people depend on the household income?",
+            "options": [
+              {"label": "Very high responsibility", "score": 1},
+              {"label": "High responsibility", "score": 2},
+              {"label": "Moderate responsibility", "score": 3},
+              {"label": "Low responsibility", "score": 4},
+              {"label": "Very low responsibility", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q3",
+            "text": "Number of dependents",
+            "why": "How manageable are your dependent-related financial commitments?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Manageable with pressure", "score": 3},
+              {"label": "Comfortable", "score": 4},
+              {"label": "Very comfortable", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q4",
+            "text": "Financial goals defined",
+            "why": "How clearly have you defined your major financial goals?",
+            "options": [
+              {"label": "No clear goals", "score": 1},
+              {"label": "A few ideas only", "score": 2},
+              {"label": "Some goals defined", "score": 3},
+              {"label": "Most goals defined", "score": 4},
+              {"label": "Goals are clear and documented", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q5",
+            "text": "Life stage",
+            "why": "How well does your current financial plan match your stage of life?",
+            "options": [
+              {"label": "Not aligned", "score": 1},
+              {"label": "Poorly aligned", "score": 2},
+              {"label": "Partly aligned", "score": 3},
+              {"label": "Well aligned", "score": 4},
+              {"label": "Very well aligned", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "health_income",
+        "name": "Income Health",
+        "weight": 0.20,
+        "questions": [
+          {
+            "id": "h_q6",
+            "text": "Income covers monthly expenses",
+            "why": "How comfortably does your regular income cover your monthly expenses?",
+            "options": [
+              {"label": "Does not cover them", "score": 1},
+              {"label": "Barely covers them", "score": 2},
+              {"label": "Covers them", "score": 3},
+              {"label": "Comfortably covers them", "score": 4},
+              {"label": "Easily covers them", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q7",
+            "text": "Multiple income sources",
+            "why": "How many dependable income sources do you have?",
+            "options": [
+              {"label": "One and no backup", "score": 1},
+              {"label": "One main source + occasional income", "score": 2},
+              {"label": "Two sources", "score": 3},
+              {"label": "Three sources", "score": 4},
+              {"label": "Four or more sources", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q8",
+            "text": "Income growth (3 years)",
+            "why": "How has your income / earning capacity changed over the last 3 years?",
+            "options": [
+              {"label": "Reduced significantly", "score": 1},
+              {"label": "Reduced somewhat", "score": 2},
+              {"label": "Stayed broadly similar", "score": 3},
+              {"label": "Grown moderately", "score": 4},
+              {"label": "Grown strongly", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q9",
+            "text": "Future income stability",
+            "why": "How confident are you about your future earning ability?",
+            "options": [
+              {"label": "Very uncertain", "score": 1},
+              {"label": "Uncertain", "score": 2},
+              {"label": "Fairly confident", "score": 3},
+              {"label": "Confident", "score": 4},
+              {"label": "Very confident", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "health_expense",
+        "name": "Expense Management",
+        "weight": 0.20,
+        "questions": [
+          {
+            "id": "h_q10",
+            "text": "Monthly budgeting",
+            "why": "How consistently do you plan and track your monthly spending?",
+            "options": [
+              {"label": "Never", "score": 1},
+              {"label": "Rarely", "score": 2},
+              {"label": "Sometimes", "score": 3},
+              {"label": "Usually", "score": 4},
+              {"label": "Consistently", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q11",
+            "text": "Essential expense ratio",
+            "why": "How comfortable is your essential spending compared with your income?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Manageable", "score": 3},
+              {"label": "Comfortable", "score": 4},
+              {"label": "Very comfortable", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q12",
+            "text": "Overspending frequency",
+            "why": "How often do you spend more than planned?",
+            "options": [
+              {"label": "Very often", "score": 1},
+              {"label": "Often", "score": 2},
+              {"label": "Sometimes", "score": 3},
+              {"label": "Rarely", "score": 4},
+              {"label": "Almost never", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q13",
+            "text": "Ability to reduce discretionary spend",
+            "why": "If needed, how easily could you reduce non-essential spending?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Somewhat possible", "score": 3},
+              {"label": "Easy", "score": 4},
+              {"label": "Very easy", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "health_savings",
+        "name": "Savings & Liquidity",
+        "weight": 0.20,
+        "questions": [
+          {
+            "id": "h_q14",
+            "text": "Emergency fund",
+            "why": "How long could your readily available savings cover essential expenses?",
+            "options": [
+              {"label": "Less than 1 month", "score": 1},
+              {"label": "1–3 months", "score": 2},
+              {"label": "3–6 months", "score": 3},
+              {"label": "6–9 months", "score": 4},
+              {"label": "More than 9 months", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q15",
+            "text": "Monthly savings rate",
+            "why": "How much of your income do you normally save or invest?",
+            "options": [
+              {"label": "None", "score": 1},
+              {"label": "Less than 10%", "score": 2},
+              {"label": "10–20%", "score": 3},
+              {"label": "20–30%", "score": 4},
+              {"label": "More than 30%", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q16",
+            "text": "Savings consistency",
+            "why": "How consistently do you save or invest?",
+            "options": [
+              {"label": "Almost never", "score": 1},
+              {"label": "Occasionally", "score": 2},
+              {"label": "Most months", "score": 3},
+              {"label": "Every month", "score": 4},
+              {"label": "Every month and automatically", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q17",
+            "text": "Liquid assets availability",
+            "why": "How easily can you access money without selling long-term assets at an unfavourable time?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Manageable", "score": 3},
+              {"label": "Easy", "score": 4},
+              {"label": "Very easy", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "health_debt",
+        "name": "Debt Management",
+        "weight": 0.15,
+        "questions": [
+          {
+            "id": "h_q18",
+            "text": "Debt-to-Income",
+            "why": "How manageable are your total loan payments compared with your income?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Manageable", "score": 3},
+              {"label": "Comfortable", "score": 4},
+              {"label": "Very comfortable", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q19",
+            "text": "Credit utilisation",
+            "why": "How comfortably do you manage your available credit limits?",
+            "options": [
+              {"label": "Frequently stretched", "score": 1},
+              {"label": "Often stretched", "score": 2},
+              {"label": "Usually manageable", "score": 3},
+              {"label": "Comfortable", "score": 4},
+              {"label": "Very comfortable", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q20",
+            "text": "EMI affordability",
+            "why": "How comfortable are your current EMIs and loan payments?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Manageable", "score": 3},
+              {"label": "Comfortable", "score": 4},
+              {"label": "Very comfortable", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q21",
+            "text": "Repayment history",
+            "why": "How consistently have you paid loans and credit on time?",
+            "options": [
+              {"label": "Frequent delays", "score": 1},
+              {"label": "Occasional delays", "score": 2},
+              {"label": "Mostly on time", "score": 3},
+              {"label": "Almost always on time", "score": 4},
+              {"label": "Always on time", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "health_investment",
+        "name": "Investment & Wealth Creation",
+        "weight": 0.10,
+        "questions": [
+          {
+            "id": "h_q22",
+            "text": "Portfolio diversification",
+            "why": "How well are your investments spread across different asset types?",
+            "options": [
+              {"label": "Mostly one asset type", "score": 1},
+              {"label": "Limited diversification", "score": 2},
+              {"label": "Some diversification", "score": 3},
+              {"label": "Well diversified", "score": 4},
+              {"label": "Well diversified and reviewed", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q23",
+            "text": "Investment discipline",
+            "why": "How consistently do you invest toward long-term goals?",
+            "options": [
+              {"label": "No clear discipline", "score": 1},
+              {"label": "Occasionally", "score": 2},
+              {"label": "Somewhat consistent", "score": 3},
+              {"label": "Consistent", "score": 4},
+              {"label": "Highly disciplined", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q24",
+            "text": "Retirement investments",
+            "why": "How well prepared are your investments for retirement or long-term needs?",
+            "options": [
+              {"label": "Not started", "score": 1},
+              {"label": "Very limited", "score": 2},
+              {"label": "Partly prepared", "score": 3},
+              {"label": "Well prepared", "score": 4},
+              {"label": "Strongly prepared", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q25",
+            "text": "Net worth trend",
+            "why": "How has your overall net worth changed in recent years?",
+            "options": [
+              {"label": "Declined significantly", "score": 1},
+              {"label": "Declined somewhat", "score": 2},
+              {"label": "Broadly unchanged", "score": 3},
+              {"label": "Grown moderately", "score": 4},
+              {"label": "Grown strongly", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "health_protection",
+        "name": "Protection & Future Planning",
+        "weight": 0.05,
+        "questions": [
+          {
+            "id": "h_q26",
+            "text": "Insurance adequacy",
+            "why": "How confident are you that your key insurance needs are adequately covered?",
+            "options": [
+              {"label": "Not covered", "score": 1},
+              {"label": "Poorly covered", "score": 2},
+              {"label": "Partly covered", "score": 3},
+              {"label": "Well covered", "score": 4},
+              {"label": "Comprehensively reviewed", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q27",
+            "text": "Estate planning",
+            "why": "How organised are your nominations and succession arrangements?",
+            "options": [
+              {"label": "Not organised", "score": 1},
+              {"label": "Very limited", "score": 2},
+              {"label": "Partly organised", "score": 3},
+              {"label": "Mostly organised", "score": 4},
+              {"label": "Well organised and reviewed", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q28",
+            "text": "Retirement planning",
+            "why": "How clearly have you planned for retirement or long-term financial independence?",
+            "options": [
+              {"label": "Not planned", "score": 1},
+              {"label": "Early stage", "score": 2},
+              {"label": "Partly planned", "score": 3},
+              {"label": "Well planned", "score": 4},
+              {"label": "Clearly planned and reviewed", "score": 5}
+            ]
+          },
+          {
+            "id": "h_q29",
+            "text": "Annual financial review",
+            "why": "How often do you formally review your finances and investments?",
+            "options": [
+              {"label": "Never", "score": 1},
+              {"label": "Rarely", "score": 2},
+              {"label": "Occasionally", "score": 3},
+              {"label": "Annually", "score": 4},
+              {"label": "At least annually with documented actions", "score": 5}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "financial_risk": {
+    "title": "Financial Risk Check",
+    "description": "Measures vulnerability to shocks, dependency exposure, liquidity pinch, and market volatility tolerance.",
+    "categories": [
+      {
+        "id": "risk_household",
+        "name": "Personal & Household Profile",
+        "weight": 0.15,
+        "questions": [
+          {
+            "id": "r_q1",
+            "text": "Financial dependents",
+            "why": "How manageable are your financial responsibilities toward dependents?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Manageable", "score": 3},
+              {"label": "Comfortable", "score": 4},
+              {"label": "Very comfortable", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q2",
+            "text": "Primary earning responsibility",
+            "why": "How dependent is your household on your income alone?",
+            "options": [
+              {"label": "Fully dependent on me", "score": 1},
+              {"label": "Highly dependent", "score": 2},
+              {"label": "Moderately dependent", "score": 3},
+              {"label": "Somewhat dependent", "score": 4},
+              {"label": "Multiple earning sources", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q3",
+            "text": "Recurring family commitments",
+            "why": "How manageable are your regular family financial commitments?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Manageable", "score": 3},
+              {"label": "Comfortable", "score": 4},
+              {"label": "Very comfortable", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q4",
+            "text": "Expected healthcare financial burden",
+            "why": "How prepared are you for potential healthcare-related costs?",
+            "options": [
+              {"label": "Not prepared", "score": 1},
+              {"label": "Limited preparation", "score": 2},
+              {"label": "Some preparation", "score": 3},
+              {"label": "Well prepared", "score": 4},
+              {"label": "Strongly prepared", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q5",
+            "text": "Estate & nominee planning",
+            "why": "How organised are your nominations and succession arrangements?",
+            "options": [
+              {"label": "Not organised", "score": 1},
+              {"label": "Very limited", "score": 2},
+              {"label": "Partly organised", "score": 3},
+              {"label": "Mostly organised", "score": 4},
+              {"label": "Well organised and reviewed", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "risk_income",
+        "name": "Income & Employment Risk",
+        "weight": 0.20,
+        "questions": [
+          {
+            "id": "r_q6",
+            "text": "Employment / income stability",
+            "why": "How stable is your primary source of income?",
+            "options": [
+              {"label": "Very unstable", "score": 1},
+              {"label": "Unstable", "score": 2},
+              {"label": "Fairly stable", "score": 3},
+              {"label": "Stable", "score": 4},
+              {"label": "Very stable", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q7",
+            "text": "Income predictability",
+            "why": "How predictable is the amount and timing of your income?",
+            "options": [
+              {"label": "Highly unpredictable", "score": 1},
+              {"label": "Unpredictable", "score": 2},
+              {"label": "Somewhat predictable", "score": 3},
+              {"label": "Predictable", "score": 4},
+              {"label": "Very predictable", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q8",
+            "text": "Income diversification",
+            "why": "How many dependable income sources do you have?",
+            "options": [
+              {"label": "One only", "score": 1},
+              {"label": "One main + occasional", "score": 2},
+              {"label": "Two", "score": 3},
+              {"label": "Three", "score": 4},
+              {"label": "Four or more", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q9",
+            "text": "Income loss preparedness",
+            "why": "If your main income stopped, how prepared would you be financially?",
+            "options": [
+              {"label": "Not prepared", "score": 1},
+              {"label": "Limited preparation", "score": 2},
+              {"label": "Some preparation", "score": 3},
+              {"label": "Well prepared", "score": 4},
+              {"label": "Very well prepared", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "risk_liquidity",
+        "name": "Liquidity Risk",
+        "weight": 0.20,
+        "questions": [
+          {
+            "id": "r_q10",
+            "text": "Emergency fund",
+            "why": "How long could your readily available savings cover essential expenses?",
+            "options": [
+              {"label": "Less than 1 month", "score": 1},
+              {"label": "1–3 months", "score": 2},
+              {"label": "3–6 months", "score": 3},
+              {"label": "6–9 months", "score": 4},
+              {"label": "More than 9 months", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q11",
+            "text": "Savings habit",
+            "why": "How consistently do you save or invest?",
+            "options": [
+              {"label": "Almost never", "score": 1},
+              {"label": "Occasionally", "score": 2},
+              {"label": "Most months", "score": 3},
+              {"label": "Every month", "score": 4},
+              {"label": "Every month and automatically", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q12",
+            "text": "Unexpected expense capacity",
+            "why": "How well could you handle a major unexpected expense?",
+            "options": [
+              {"label": "Would need to borrow", "score": 1},
+              {"label": "Would struggle", "score": 2},
+              {"label": "Could manage with adjustments", "score": 3},
+              {"label": "Could manage comfortably", "score": 4},
+              {"label": "Could manage without disrupting plans", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q13",
+            "text": "Cash accessibility",
+            "why": "How easily can you access funds when needed?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Manageable", "score": 3},
+              {"label": "Easy", "score": 4},
+              {"label": "Very easy", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "risk_debt",
+        "name": "Debt & Credit Risk",
+        "weight": 0.20,
+        "questions": [
+          {
+            "id": "r_q14",
+            "text": "Debt burden",
+            "why": "How manageable are your total debts compared with your income?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Manageable", "score": 3},
+              {"label": "Comfortable", "score": 4},
+              {"label": "Very comfortable", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q15",
+            "text": "Credit utilisation",
+            "why": "How comfortably do you manage your available credit limits?",
+            "options": [
+              {"label": "Frequently stretched", "score": 1},
+              {"label": "Often stretched", "score": 2},
+              {"label": "Usually manageable", "score": 3},
+              {"label": "Comfortable", "score": 4},
+              {"label": "Very comfortable", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q16",
+            "text": "Repayment behaviour",
+            "why": "How consistently do you repay debt on time and in full?",
+            "options": [
+              {"label": "Frequent delays", "score": 1},
+              {"label": "Occasional delays", "score": 2},
+              {"label": "Mostly on time", "score": 3},
+              {"label": "Almost always on time", "score": 4},
+              {"label": "Always on time", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q17",
+            "text": "Fixed obligations",
+            "why": "How manageable are your fixed monthly commitments such as EMIs, rent and premiums?",
+            "options": [
+              {"label": "Very difficult", "score": 1},
+              {"label": "Difficult", "score": 2},
+              {"label": "Manageable", "score": 3},
+              {"label": "Comfortable", "score": 4},
+              {"label": "Very comfortable", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "risk_investment",
+        "name": "Investment Risk",
+        "weight": 0.15,
+        "questions": [
+          {
+            "id": "r_q18",
+            "text": "Investment experience",
+            "why": "How comfortable are you with investment concepts and market fluctuations?",
+            "options": [
+              {"label": "Very limited", "score": 1},
+              {"label": "Limited", "score": 2},
+              {"label": "Moderate", "score": 3},
+              {"label": "Good", "score": 4},
+              {"label": "Strong", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q19",
+            "text": "Investment horizon",
+            "why": "How much time can you generally give your long-term investments?",
+            "options": [
+              {"label": "Less than 1 year", "score": 1},
+              {"label": "1–3 years", "score": 2},
+              {"label": "3–5 years", "score": 3},
+              {"label": "5–10 years", "score": 4},
+              {"label": "More than 10 years", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q20",
+            "text": "Portfolio diversification",
+            "why": "How well are your investments spread across different asset types?",
+            "options": [
+              {"label": "Mostly one asset type", "score": 1},
+              {"label": "Limited diversification", "score": 2},
+              {"label": "Some diversification", "score": 3},
+              {"label": "Well diversified", "score": 4},
+              {"label": "Well diversified and reviewed", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q21",
+            "text": "Market behaviour",
+            "why": "How comfortable are you with temporary market falls?",
+            "options": [
+              {"label": "Very uncomfortable", "score": 1},
+              {"label": "Uncomfortable", "score": 2},
+              {"label": "Can tolerate small falls", "score": 3},
+              {"label": "Can tolerate moderate falls", "score": 4},
+              {"label": "Can tolerate significant falls without panic selling", "score": 5}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "risk_protection",
+        "name": "Protection & Financial Planning",
+        "weight": 0.10,
+        "questions": [
+          {
+            "id": "r_q22",
+            "text": "Insurance adequacy",
+            "why": "How confident are you that your key insurance needs are adequately covered?",
+            "options": [
+              {"label": "Not covered", "score": 1},
+              {"label": "Poorly covered", "score": 2},
+              {"label": "Partly covered", "score": 3},
+              {"label": "Well covered", "score": 4},
+              {"label": "Comprehensively reviewed", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q23",
+            "text": "Financial planning",
+            "why": "How consistently do you set financial goals and follow a plan?",
+            "options": [
+              {"label": "No plan", "score": 1},
+              {"label": "Rarely planned", "score": 2},
+              {"label": "Some planning", "score": 3},
+              {"label": "Regular planning", "score": 4},
+              {"label": "Structured and reviewed plan", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q24",
+            "text": "Budget reviews",
+            "why": "How often do you review your budget and spending?",
+            "options": [
+              {"label": "Never", "score": 1},
+              {"label": "Rarely", "score": 2},
+              {"label": "Occasionally", "score": 3},
+              {"label": "Monthly", "score": 4},
+              {"label": "Regularly with action points", "score": 5}
+            ]
+          },
+          {
+            "id": "r_q25",
+            "text": "Retirement planning",
+            "why": "How prepared are you for retirement or long-term financial independence?",
+            "options": [
+              {"label": "Not prepared", "score": 1},
+              {"label": "Early stage", "score": 2},
+              {"label": "Partly prepared", "score": 3},
+              {"label": "Well prepared", "score": 4},
+              {"label": "Very well prepared", "score": 5}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "action_plan_templates": [
+    {
+      "priority": 1,
+      "area": "Emergency Fund",
+      "action": "Build readily available savings toward an appropriate emergency reserve.",
+      "why": "Improves resilience when income stops or unexpected costs arise.",
+      "timeframe": "0–3 months",
+      "status": "Priority Action"
+    },
+    {
+      "priority": 2,
+      "area": "Debt Review",
+      "action": "Review loan payments, total debt and credit commitments.",
+      "why": "Reduces cash-flow pressure and financial vulnerability.",
+      "timeframe": "0–3 months",
+      "status": "Recommended"
+    },
+    {
+      "priority": 3,
+      "area": "Income Resilience",
+      "action": "Review income stability and consider suitable diversification where practical.",
+      "why": "Reduces reliance on a single income source.",
+      "timeframe": "3–6 months",
+      "status": "Strategic"
+    },
+    {
+      "priority": 4,
+      "area": "Protection Review",
+      "action": "Review health, life/term and other relevant protection needs.",
+      "why": "Helps protect the household from major financial shocks.",
+      "timeframe": "0–3 months",
+      "status": "Essential"
+    },
+    {
+      "priority": 5,
+      "area": "Investment Review",
+      "action": "Review diversification, time horizon and alignment with goals.",
+      "why": "Keeps investments aligned with objectives and risk capacity.",
+      "timeframe": "3–6 months",
+      "status": "Growth"
+    },
+    {
+      "priority": 6,
+      "area": "Financial Review",
+      "action": "Set a recurring financial review and record agreed actions.",
+      "why": "Creates discipline and keeps the plan current.",
+      "timeframe": "At least annually",
+      "status": "Governance"
+    }
+  ]
+}
