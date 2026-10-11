@@ -1,0 +1,5 @@
+# Needed only for the assessment PDF report (the rest of the site uses the standard library).
+# Install with:  py -3.11 -m pip install -r requirements.txt
+reportlab>=4.0
+matplotlib>=3.7
+numpy>=1.24

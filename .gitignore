@@ -1,0 +1,35 @@
+# Environment & Secrets
+.env
+irah.env
+*.env
+*.pem
+*.key
+
+# Local Data & Submissions (PII Protection)
+inquiries.json
+assessment_submissions.json
+assessment_reports/
+*.pdf.tmp*
+quarantine_*.json*
+
+# Python Runtime & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Temporary & Test Files
+.pytest_cache/
+*.log
+t.env
+test_*.pdf
+
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
