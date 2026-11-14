@@ -1,0 +1,46 @@
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+irah.env
+*.env
+*.pem
+*.key
+
+# Node / JS Dependencies
+node_modules/
+
+# Local Data & Submissions (PII Protection)
+inquiries.json
+assessment_submissions.json
+assessment_reports/
+*.pdf.tmp*
+quarantine_*.json*
+
+# Python Runtime & Bytecode
+__pycache__/
+*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Temporary & Test Files
+.pytest_cache/
+*.log
+*.tmp
+*.bak
+t.env
+test_*.pdf
+
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local-Only Agent Single Source of Truth (Never Push to GitHub)
+LOCAL_SSOT.md

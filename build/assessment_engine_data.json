@@ -1,0 +1,378 @@
+{
+  "methodology_version": "2026.4-condensed-15",
+  "total_questions": 15,
+  "financial_health": {
+    "title": "Part A: Financial Health & Balance Sheet Resilience",
+    "description": "Evaluates surplus generation, debt prudence, liquidity buffer, and foundational security.",
+    "weight": 0.5,
+    "questions": [
+      {
+        "id": "h_q1",
+        "title": "1. Monthly Savings & Surplus Velocity",
+        "description": "What percentage of your household net monthly earnings is systematically saved or invested?",
+        "weight": 0.15,
+        "options": [
+          {
+            "label": "Under 10% (Limited surplus accumulation)",
+            "score": 1
+          },
+          {
+            "label": "10% to 20% (Moderate disciplined savings)",
+            "score": 2.5
+          },
+          {
+            "label": "20% to 35% (Strong systematic velocity)",
+            "score": 4
+          },
+          {
+            "label": "Above 35% (High surplus capital compounding)",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "h_q2",
+        "title": "2. Ring-Fenced Emergency Liquidity Moat",
+        "description": "How many months of essential living expenses are segregated in liquid mutual funds / bank accounts?",
+        "weight": 0.15,
+        "options": [
+          {
+            "label": "Less than 2 months (High liquidity risk)",
+            "score": 1
+          },
+          {
+            "label": "2 to 4 months (Emerging liquidity cushion)",
+            "score": 2.5
+          },
+          {
+            "label": "5 to 8 months (Prudent liquid moat)",
+            "score": 4
+          },
+          {
+            "label": "9+ months (Robust multi-season buffer)",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "h_q3",
+        "title": "3. Debt Servicing & Leverage Headroom",
+        "description": "What proportion of your monthly income is committed to total loan EMIs / debt obligations?",
+        "weight": 0.15,
+        "options": [
+          {
+            "label": "Over 50% (High leverage pressure)",
+            "score": 1
+          },
+          {
+            "label": "35% to 50% (Elevated debt commitment)",
+            "score": 2.5
+          },
+          {
+            "label": "15% to 34% (Healthy controlled leverage)",
+            "score": 4
+          },
+          {
+            "label": "Under 15% or zero debt (Maximal cashflow freedom)",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "h_q4",
+        "title": "4. Life & Health Insurance Protection Audit",
+        "description": "Does your family have dedicated pure term life cover and comprehensive medical insurance?",
+        "weight": 0.15,
+        "options": [
+          {
+            "label": "Minimal or employer corporate group cover only",
+            "score": 1
+          },
+          {
+            "label": "Basic health policy, but term life is under 5x income",
+            "score": 2.5
+          },
+          {
+            "label": "Family floater (\u20b915L+) & pure term life at 10x-15x income",
+            "score": 4
+          },
+          {
+            "label": "Comprehensive health + super top-up + 15x+ term cover",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "h_q5",
+        "title": "5. Asset Class Diversification Quality",
+        "description": "How is your investable net worth distributed across mutual funds, equities, debt, and liquid assets?",
+        "weight": 0.1,
+        "options": [
+          {
+            "label": "Heavily concentrated in real estate or single asset",
+            "score": 1
+          },
+          {
+            "label": "Primarily traditional bank FDs and endowment plans",
+            "score": 2.5
+          },
+          {
+            "label": "Balanced mix across Mutual Funds, Equities & Debt",
+            "score": 4
+          },
+          {
+            "label": "Multi-asset institutional structure with periodic re-balancing",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "h_q6",
+        "title": "6. Retirement & Longevity Compounding",
+        "description": "Have you calculated your retirement corpus and mapped active systematic SIP compounding toward it?",
+        "weight": 0.1,
+        "options": [
+          {
+            "label": "Not started or relying solely on statutory provident fund",
+            "score": 1
+          },
+          {
+            "label": "Ad-hoc savings without a structured corpus roadmap",
+            "score": 2.5
+          },
+          {
+            "label": "Defined corpus target with active monthly SIP investments",
+            "score": 4
+          },
+          {
+            "label": "Advanced multi-pillar compounding roadmap on track",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "h_q7",
+        "title": "7. Children Higher Education & Milestone Segregation",
+        "description": "Are major upcoming lifecycle goals (e.g. child education, marriage) earmarked in dedicated folios?",
+        "weight": 0.1,
+        "options": [
+          {
+            "label": "No segregated accounts or duration matching",
+            "score": 1
+          },
+          {
+            "label": "General pooling without timeline de-risking glide paths",
+            "score": 2.5
+          },
+          {
+            "label": "Dedicated mutual fund folios mapped to milestone dates",
+            "score": 4
+          },
+          {
+            "label": "Earmarked portfolios with automated asset de-risking schedules",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "h_q8",
+        "title": "8. Estate Governance & Account Operational Readiness",
+        "description": "Are nominations active across all investments, folios, bank accounts, and is estate documentation updated?",
+        "weight": 0.1,
+        "options": [
+          {
+            "label": "Gaps in nominations and missing document inventory",
+            "score": 1
+          },
+          {
+            "label": "Basic nominations exist; no consolidated estate review",
+            "score": 2.5
+          },
+          {
+            "label": "100% active nominations, verified KYC & documented inventory",
+            "score": 4
+          },
+          {
+            "label": "Comprehensive family governance with registered estate plan",
+            "score": 5
+          }
+        ]
+      }
+    ]
+  },
+  "financial_risk": {
+    "title": "Part B: Risk Capacity & Drawdown Resilience",
+    "description": "Evaluates volatility tolerance, income shock runway, horizon matching, and drawdown recovery capacity.",
+    "weight": 0.5,
+    "questions": [
+      {
+        "id": "r_q1",
+        "title": "9. Inflow Stability & Earnings Concentration",
+        "description": "How stable and diversified are your primary professional or corporate income streams?",
+        "weight": 0.15,
+        "options": [
+          {
+            "label": "Cyclical income or single client/customer concentration",
+            "score": 1
+          },
+          {
+            "label": "Single salary or moderately variable consulting revenues",
+            "score": 2.5
+          },
+          {
+            "label": "Stable corporate employment or established firm operations",
+            "score": 4
+          },
+          {
+            "label": "Multiple uncorrelated cashflow streams & dividend income",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "r_q2",
+        "title": "10. Drawdown Tolerance & Market Correction Reaction",
+        "description": "If a macroeconomic downturn caused market-linked assets to decline 20% over 6 months, you would:",
+        "weight": 0.15,
+        "options": [
+          {
+            "label": "Liquidate immediately to cash to prevent further downside",
+            "score": 1
+          },
+          {
+            "label": "Pause systematic investments with heightened concern",
+            "score": 2.5
+          },
+          {
+            "label": "Stay invested calmly, acknowledging standard market cycles",
+            "score": 4
+          },
+          {
+            "label": "Deploy additional surplus into equities at discounted valuations",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "r_q3",
+        "title": "11. Investment Holding Duration & Capital Horizon",
+        "description": "What is the primary timeline for the core capital deployed in your investment portfolio?",
+        "weight": 0.15,
+        "options": [
+          {
+            "label": "Under 12 months (Immediate liquidity requirements)",
+            "score": 1
+          },
+          {
+            "label": "1 to 3 years (Short to medium-term allocation)",
+            "score": 2.5
+          },
+          {
+            "label": "4 to 7 years (Medium to long-term compounding)",
+            "score": 4
+          },
+          {
+            "label": "8+ years or multi-generational legacy wealth creation",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "r_q4",
+        "title": "12. Discretionary Expense Curtailment Flexibility",
+        "description": "If household earnings contracted by 25%, how easily could lifestyle expenses be curtailed?",
+        "weight": 0.15,
+        "options": [
+          {
+            "label": "Fixed commitments dominate; very difficult to cut spending",
+            "score": 1
+          },
+          {
+            "label": "Modest flexibility; could trim non-essentials with effort",
+            "score": 2.5
+          },
+          {
+            "label": "Good flexibility; travel and leisure outlays easily reduced",
+            "score": 4
+          },
+          {
+            "label": "High expenditure flexibility with substantial lifestyle buffer",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "r_q5",
+        "title": "13. Dependent Liabilities & Family Financial Support",
+        "description": "How many non-earning family dependents currently rely on your ongoing cashflow support?",
+        "weight": 0.15,
+        "options": [
+          {
+            "label": "4+ dependents with extensive recurring financial needs",
+            "score": 1
+          },
+          {
+            "label": "2 to 3 dependents with moderate education/medical outlays",
+            "score": 2.5
+          },
+          {
+            "label": "1 to 2 dependents with well-planned support reserves",
+            "score": 4
+          },
+          {
+            "label": "Independent financial unit with zero dependent liability",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "r_q6",
+        "title": "14. Track Record with Market-Linked Products",
+        "description": "What is your historical personal investment experience across mutual funds and equities?",
+        "weight": 0.15,
+        "options": [
+          {
+            "label": "Exclusively fixed deposits, postal schemes, and gold",
+            "score": 1
+          },
+          {
+            "label": "1 to 3 years primarily in basic mutual fund SIPs",
+            "score": 2.5
+          },
+          {
+            "label": "4 to 9 years across varied market and interest rate cycles",
+            "score": 4
+          },
+          {
+            "label": "10+ years across Mutual Funds, PMS, AIFs and Direct Equities",
+            "score": 5
+          }
+        ]
+      },
+      {
+        "id": "r_q7",
+        "title": "15. Core Wealth Allocation Mandate",
+        "description": "Which strategic statement best reflects your mandate for your wealth architecture?",
+        "weight": 0.1,
+        "options": [
+          {
+            "label": "Capital preservation is paramount; cannot accept nominal loss",
+            "score": 1
+          },
+          {
+            "label": "Cautious yield generation with low volatility exposure",
+            "score": 2.5
+          },
+          {
+            "label": "Balanced wealth compounding beating inflation by 4-6%",
+            "score": 4
+          },
+          {
+            "label": "Aggressive capital compounding targeting alpha outperformance",
+            "score": 5
+          }
+        ]
+      }
+    ]
+  }
+}
